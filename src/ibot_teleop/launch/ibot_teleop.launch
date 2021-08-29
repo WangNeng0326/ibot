@@ -1,0 +1,4 @@
+<launch>
+    <node name="ibot_teleop" pkg="ibot_teleop" type="ibot_teleop.py" output="screen">\
+    </node>
+</launch>

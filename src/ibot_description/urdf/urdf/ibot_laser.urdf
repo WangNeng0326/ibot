@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<robot name="ibot">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.28 .26 .02"/>
+      </geometry>
+      <origin rpy="0 0 2.61799" xyz="0 0 0"/>
+      <material name="chengse">
+          <color rgba="1 0.4 0 1"/>
+      </material>
+    </visual>
+ </link>
+  <link name="right_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="right_front_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="right_front_wheel"/>
+    <origin rpy="0 1.57075 1.04719" xyz="0.2 0.06 -0.04"/>
+  </joint>
+  <link name="right_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="right_back_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="right_back_wheel"/>
+    <origin rpy="0 1.57075 1.04719" xyz="0.045 -0.2 -0.04"/>
+ </joint>
+  <link name="left_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="left_front_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="left_front_wheel"/>
+    <origin rpy="0 1.57075 1.04719" xyz="-0.045 0.2 -0.04"/>
+  </joint>
+  <link name="left_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="left_back_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="left_back_wheel"/>
+    <origin rpy="0 1.57075 1.04719" xyz="-0.2 -0.06 -0.04"/>
+  </joint>
+</robot>

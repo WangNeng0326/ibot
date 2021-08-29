@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<robot name="ibot">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.28 .26 .02"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="chengse">
+          <color rgba="1 0.4 0 1"/>
+      </material>
+    </visual>
+ </link>
+ <link name="right_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="right_front_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="right_front_wheel"/>
+    <origin rpy="0 1.57075 0" xyz="0.14 0.14 -0.04"/>
+  </joint>
+  <link name="right_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="right_back_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="right_back_wheel"/>
+    <origin rpy="0 1.57075 0" xyz="0.14 -0.14 -0.04"/>
+ </joint>
+ <link name="left_front_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="left_front_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="left_front_wheel"/>
+    <origin rpy="0 1.57075 0" xyz="-0.14 0.14 -0.04"/>
+  </joint>
+  <link name="left_back_wheel">
+    <visual>
+      <geometry>
+        <cylinder length=".05" radius="0.045"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 0.9"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="left_back_wheel_joint" type="fixed">
+    <axis xyz="0 0 1"/>
+    <parent link="base_link"/>
+    <child link="left_back_wheel"/>
+    <origin rpy="0 1.57075 0" xyz="-0.14 -0.14 -0.04"/>
+  </joint>
+  <link name="laser_board">
+    <visual>
+      <geometry>
+        <box size="0.11 .11 .12"/>
+      </geometry>
+      <origin rpy="0 0 1.57075" xyz="0 0 0"/>
+      <material name="chengse">
+        <color rgba="1 0.4 0 1"/>
+      </material>
+    </visual>
+ </link>
+  <joint name="laser_board_joint" type="fixed">
+      <origin xyz="0 0.05 0.06" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="laser_board"/>
+  </joint>
+
+    <link name="laser">
+		<visual>
+			<origin xyz=" 0 0 0 " rpy="0 0 0" />
+			<geometry>
+				<cylinder length="0.04" radius="0.036"/>
+			</geometry>
+			<material name="black"/>
+		</visual>
+    </link>
+
+    <joint name="laser_joint" type="fixed">
+        <origin xyz="0 0.05 0.14" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="laser"/>
+    </joint>
+</robot>

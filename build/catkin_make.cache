@@ -1,0 +1,2 @@
+arbotix_ros/arbotix:arbotix_ros/arbotix_controllers:arbotix_ros/arbotix_firmware:arbotix_ros/arbotix_msgs:arbotix_ros/arbotix_python:arbotix_ros/arbotix_sensors:delta_III_ros:ibot_description:ibot_driver:ibot_navigation:ibot_run:ibot_teleop
+-DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX=/home/wangneng/ROS_Work/ros_ibot/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/wangneng/ROS_Work/ros_ibot/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,15 @@
+<launch>
+
+  <!--激光雷达-->
+  <include file="$(find delta_lidar)/launch/delta_driver.launch" />
+
+  <!--运行hector_slam-->
+  <include file="$(find ibot_navigation)/launch/hector.launch" />  
+
+  <!--运行键盘控制-->
+  <!--<include file="$(find ibot_teleop)/launch/ibot_keyboard.launch" />-->
+
+  <!--运行stm32通信-->
+  <node name="ibot_bringup_slam" pkg="ibot_driver" type="ibot_bringup_slam" output="screen" />
+ 
+</launch>

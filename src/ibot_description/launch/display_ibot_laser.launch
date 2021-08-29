@@ -1,0 +1,16 @@
+<launch>
+	<param name="robot_description" textfile="$(find ibot_description)/urdf/urdf/ibot_laser.urdf" />
+
+	<!-- 设置GUI参数，显示关节控制插件 -->
+	<param name="use_gui" value="false"/>
+	
+	<!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+	
+	<!-- 运行robot_state_publisher节点，发布tf  -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+	<node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0.025 -0.043301 0.14 3.1415926 0 0 /base_link /laser 100" />
+	<!-- 运行rviz可视化界面 -->
+	<!--<node name="rviz" pkg="rviz" type="rviz" args="-d $(find ibot_description)/config/ibot_laser_urdf.rviz" required="true" />-->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/wangneng/ROS_Work/ros_ibot/catkin_ws/devel
+
+Name: mbot_description
+Description: Description of mbot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wangneng/ROS_Work/ros_ibot/catkin_ws/devel/lib 
+Requires: 

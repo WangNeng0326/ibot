@@ -1,0 +1,8 @@
+prefix=/home/wangneng/ROS_Work/ros_ibot/catkin_ws/install
+
+Name: ibot_navigation
+Description: Description of ibot_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/wangneng/ROS_Work/ros_ibot/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find delta_lidar)/launch/delta_driver.launch" />
+
+  <node name="ibot_bringup" pkg="ibot_driver" type="ibot_bringup" output="screen" />
+  <!--<node name="teleop_keyboard" pkg="ibot_teleop" type="teleop_keyboard"  />-->
+</launch>

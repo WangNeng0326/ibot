@@ -1,0 +1,6 @@
+<launch>
+
+   
+     <!-- 运行rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find ibot_navigation)/rviz/nav.rviz"/>
+</launch>
